@@ -25,7 +25,7 @@ html {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 700;
   letter-spacing: 4px;
 }
@@ -105,7 +105,7 @@ h4 {
 
 /* -------------------HOME-PAGE-MAIN SCREEN---------------------------- */
 .main-container {
-  width: auto;
+  width: 100%;
   flex-direction: column-reverse;
   margin: 0 auto;
 }
@@ -128,6 +128,7 @@ h4 {
 .main-text-container p {
   margin-top: 5%;
   color: grey;
+  line-height: 180%;
 }
 .right-main {
   flex-basis: 100%;
@@ -158,31 +159,39 @@ h4 {
 .video-pic-div {
   flex-basis: 100%;
 }
-.background-images-container {
-  width: auto;
-  flex-direction: column;
+.story-imgs-outermost-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
 }
 .relative-container {
   position: relative;
 }
-.mountains-pic {
-  flex-basis: 100%;
+.linear-black {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-.sunset-pic {
-  flex-basis: 100%;
+.linear-black:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
 }
-.voyage-pic {
-  flex-basis: 100%;
-}
-.archetict-pic {
-  flex-basis: 100%;
+.img-settings {
+  width: 100%;
+  vertical-align: bottom;
+  height: 100%;
 }
 .background-imgs-text {
   color: white;
   position: absolute;
-  width: 400px;
+  width: 250px;
   left: 10%;
-  top: 60%;
+  top: 42%;
   margin: 0;
   text-shadow: 2px 2px black;
 }
@@ -193,15 +202,14 @@ h4 {
 .image-description h2 {
   margin-bottom: 2%;
 }
-.image-description p {
+.author {
   margin-bottom: 7%;
 }
-.read-story-text i {
-  margin-left: 50%;
+.date {
+  margin-bottom: 2%;
 }
 .home-features-container {
   margin: 10% auto;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -218,23 +226,32 @@ h4 {
 .home-features-text h3 {
   margin-bottom: 5%;
 }
+.read-story-text i {
+  margin-left: 20%;
+}
 .home-features-text p {
   color: grey;
 }
 .responsive-container {
   flex-basis: 100%;
   margin-bottom: 15%;
-  width: 400px;
+  width: 250px;
 }
 .limit-container {
   flex-basis: 100%;
   margin-bottom: 15%;
-  width: 400px;
+  width: 250px;
 }
 .embeded-container {
   flex-basis: 100%;
   margin-bottom: 15%;
-  width: 400px;
+  width: 250px;
+}
+.mobile {
+  display: block;
+}
+.tablet {
+  display: none;
 }
 /* ---------------FOOTER----------------- */
 .footer-main {
@@ -244,9 +261,9 @@ h4 {
   overflow: hidden;
 }
 .footer-info-div {
-  height: 50px;
+  height: 250px;
   width: 100%;
-  margin: 20% auto;
+  margin: 7% auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -255,6 +272,9 @@ h4 {
   margin-left: 5%;
   margin-bottom: 4%;
   flex-basis: 100%;
+  width: 200px;
+  text-align: center;
+  margin: 0;
 }
 .footer-logo {
   color: white;
@@ -269,12 +289,13 @@ h4 {
   display: flex;
   flex-direction: column;
   margin-bottom: 5%;
-  align-items: center;
+  width: 200px;
+  text-align: center;
 }
 .footer-links {
   color: white;
   text-decoration: none;
-  margin: 10% 0;
+  margin: 4% 0;
   cursor: pointer;
 }
 .footer-links:hover {
@@ -283,17 +304,70 @@ h4 {
 }
 .social-media-div {
   flex-basis: 100%;
-  width: 100%;
+  width: 200px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
 }
 .media-links {
   margin-right: 2%;
   cursor: pointer;
 }
+/* ------------------MEDIA QUERIES SCREENS----------------------------- */
 
-/* ------------------SMALLER SCREENS----------------------------- */
+@media only screen and (min-width: 768px) {
+  .main-container {
+    flex-direction: row;
+  }
+  .left-main {
+    flex-basis: 60%;
+  }
+  .main-text-container {
+    margin: 50% 10%;
+  }
+  .right-main {
+    flex-basis: 40%;
+  }
+  .mobile {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
+  .second-container {
+    flex-direction: row;
+  }
+  .computer-pic-div {
+    flex-basis: 40%;
+  }
+  .container-white {
+    flex-basis: 60%;
+  }
+  .third-container {
+    flex-direction: row;
+  }
+  .design-container {
+    flex-basis: 60%;
+  }
+  .video-pic-div {
+    flex-basis: 40%;
+  }
+  .story-imgs-outermost-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .background-imgs-text {
+    position: absolute;
+    width: 300px;
+    left: 10%;
+    top: 50%;
+  }
+  .moon-text-wrapper h1 {
+    font-size: 35px;
+  }
+  .read-story-text i {
+    margin-left: 40%;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   /* ----------NAVBAR--------------- */

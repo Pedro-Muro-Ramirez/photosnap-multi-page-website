@@ -36,7 +36,7 @@ h3 {
   font-weight: 700;
 }
 h4 {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 700px;
 }
 .flex {
@@ -48,6 +48,12 @@ h4 {
 .center {
   text-align: center;
   align-items: center;
+}
+.mobile {
+  display: block;
+}
+.tablet {
+  display: none;
 }
 /* ------------------------NAVBAR-------------------------------- */
 .navbar-toggle {
@@ -150,8 +156,8 @@ h4 {
 }
 .cards {
   background-color: var(--light-grey);
-  height: 450px;
-  width: 400px;
+  height: 350px;
+  width: 250px;
   margin: 0 auto 3%;
 }
 .cards-info-wrapper {
@@ -171,8 +177,8 @@ h4 {
 }
 .price-button {
   vertical-align: bottom;
-  height: 50px;
-  width: 300px;
+  height: 30px;
+  width: 100px;
   background-color: var(--pure-black);
   color: var(--pure-white);
   border: none;
@@ -194,11 +200,11 @@ h4 {
 /* ----------------COMPARE SECTION-------------- */
 .compare-title {
   margin: 5% auto;
-  width: 500px;
+  width: 200px;
   text-align: center;
 }
 .compare-features-wrapper {
-  width: 800px;
+  width: 280px;
   margin: 0 auto 10%;
 }
 .compare-grid-container {
@@ -234,17 +240,20 @@ h4 {
 }
 .beta-text-wrapper {
   margin: 40px auto 0;
-  width: 400px;
+  width: 200px;
+}
+.beta-text-wrapper h1 {
+  font-size: 20px;
 }
 .beta-right-container {
   flex-basis: 100%;
 }
 .invite-wrapper {
-  width: 400px;
+  width: 200px;
   margin: 30px auto 0;
 }
 .invite-wrapper i {
-  margin-left: 50%;
+  margin-left: 20%;
   cursor: pointer;
 }
 
@@ -289,7 +298,7 @@ h4 {
 }
 .footer-info-div {
   height: 250px;
-  width: 400px;
+  width: 100%;
   margin: 7% auto;
   flex-direction: column;
   justify-content: center;
@@ -338,6 +347,41 @@ h4 {
 .media-links {
   margin-right: 2%;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .top-outermost-container {
+    flex-direction: row;
+  }
+  .left-main-container {
+    flex-basis: 60%;
+  }
+  .right-main-container {
+    flex-basis: 40%;
+  }
+  .mobile {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
+  .compare-features-wrapper {
+    width: 600px;
+  }
+  .beta-container {
+    flex-direction: row;
+  }
+  .beta-text-wrapper {
+    margin: 20% auto 0;
+    width: 350px;
+  }
+  .invite-wrapper {
+    width: 300px;
+    margin: 40% auto 0;
+  }
+  .invite-wrapper i {
+    margin-left: 30%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
