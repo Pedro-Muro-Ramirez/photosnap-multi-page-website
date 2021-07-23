@@ -36,7 +36,7 @@ h3 {
   font-weight: 700;
 }
 h4 {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700px;
 }
 .flex {
@@ -44,6 +44,10 @@ h4 {
 }
 .uppercase {
   text-transform: uppercase;
+}
+.center {
+  text-align: center;
+  align-items: center;
 }
 /* ------------------------NAVBAR-------------------------------- */
 .navbar-toggle {
@@ -185,6 +189,35 @@ h4 {
 .price-button:hover {
   background-color: grey;
   cursor: pointer;
+}
+
+/* ----------------COMPARE SECTION-------------- */
+.compare-title {
+  margin: 5% auto;
+  width: 500px;
+  text-align: center;
+}
+.compare-features-wrapper {
+  width: 800px;
+  margin: 0 auto 10%;
+}
+.compare-grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin-bottom: 3%;
+}
+.border-b {
+  border-bottom: 1px solid var(--pure-black);
+  padding-bottom: 20px;
+}
+.border-g {
+  border-bottom: 1px solid var(--light-grey);
+  padding-bottom: 20px;
+}
+.checks {
+  height: auto;
+  width: 20px;
 }
 /* -------------BETA SECTION---------------- */
 .beta-container {
