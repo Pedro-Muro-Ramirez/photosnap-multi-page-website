@@ -51,6 +51,9 @@ h4 {
 .tablet {
   display: none;
 }
+.desktop {
+  display: none;
+}
 /* ------------------------NAVBAR-------------------------------- */
 .navbar-toggle {
   display: none;
@@ -65,7 +68,6 @@ h4 {
   background-color: #fff;
 }
 .navbar {
-  /* background: rgb(1, 193, 252); */
   height: 80px;
   display: flex;
   justify-content: center;
@@ -255,8 +257,53 @@ h4 {
 }
 
 /* ------------------SMALLER SCREENS----------------------------- */
+@media only screen and (min-width: 1025px) {
+  .top-outermost-container {
+    flex-direction: row;
+  }
+  .moon-img-container {
+    flex-basis: 60%;
+  }
+  .moon-text-container {
+    flex-basis: 40%;
+  }
+  .story-imgs-outermost-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .background-imgs-text {
+    width: 200px;
+    left: 10%;
+    top: 60%;
+  }
+  .image-description h2 {
+    font-size: 17px;
+  }
+  .image-description p {
+    font-size: 12px;
+  }
+  .footer-info-div {
+    margin: 3% auto;
+    width: 700px;
+  }
+  .footer-links-div {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 500px;
+  }
+  .mobile {
+    display: none;
+  }
+  .tablet {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+}
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .top-outermost-container {
     flex-direction: row;
   }
@@ -282,7 +329,22 @@ h4 {
   .read-story-text i {
     margin-left: 20%;
   }
+  .footer-info-div {
+    margin: 3% auto;
+    width: 700px;
+  }
+  .footer-links-div {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 500px;
+  }
   .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .tablet-stories {
     display: none;
   }
   .tablet {
@@ -302,7 +364,6 @@ h4 {
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
-    /* box-shadow: 0 10px 27px rgba(0, 0, 0.05); */
   }
   .navbar-menu.active {
     left: 0;
